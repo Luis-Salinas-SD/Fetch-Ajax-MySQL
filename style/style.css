@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(25, 104, 250);
+    color: white;
+}
+
+table thead {
+    background-color: rgb(16, 170, 170);
+    color: white;
+}
