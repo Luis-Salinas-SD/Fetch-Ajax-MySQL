@@ -56,11 +56,11 @@ const showData = (data) => {
 }) */
 
 botonEnviar.addEventListener('click', (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
     fetch('pagina.php', {
         method: 'POST',
-        body: JSON.stringify({ Arreglo_X: array_datos }),
+        body: JSON.stringify(array_datos),
         headers: {
             "Content-type": "application/json"
         }
