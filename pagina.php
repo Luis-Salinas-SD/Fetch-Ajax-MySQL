@@ -7,17 +7,18 @@ $json = file_get_contents('php://input');
 $datos = json_decode($json, true);
 print_r($datos);
 
-//!foreach que ingserta los valores
+//!foreach que inserta los valores del JSON a la tabla usuarios
 foreach ($datos as $row) {
-    $id = $row['id']; //
-    $nombre = $row['nombre']; //fjfjf
-    $email = $row['email']; //dfskfkfk
+    $id = $row['id'];
+    $nombre = $row['nombre'];
+    $email = $row['email'];
 
     $sql = "INSERT INTO usuarios(id,nombre,email)VALUES('$id', '$nombre', '$email')";
     $conexion->query($sql);
-    if ($conexion->query($sql) === TRUE) {
+
+    /*  if ($conexion->query($sql) === TRUE) {
         echo "Bien cuate";
     } else {
         echo "malo cuate ";
-    }
+    } */
 }
