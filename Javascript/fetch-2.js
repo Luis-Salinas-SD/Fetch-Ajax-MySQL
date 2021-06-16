@@ -66,8 +66,8 @@ botonEnviar.addEventListener('click', (event) => {
         }
     })
         .then(response => response.text())
-        .then(data => console.warn(data))
-        .catch(error => console.log(error))
+        .then(data => console.log(data))
+        .catch(error => console.error('El sigueinte error pertenece a la linea 70' + error))
 })
 
 
